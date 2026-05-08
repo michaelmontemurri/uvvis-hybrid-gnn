@@ -1,0 +1,18 @@
+{
+  "created": "2026-03-12 14:14:13",
+  "base": "data/uvvisml/abs/deep4chem/splits/random",
+  "out": "data/uvvisml/abs/deep4chem/subsets/random/N01000_s42",
+  "N": 1000,
+  "seed": 42,
+  "alignment": "row-index",
+  "files": {
+    "train_smiles": "smiles_target_train.csv",
+    "train_manifest": "train_manifest.csv",
+    "val_smiles": null,
+    "test_smiles": null,
+    "train_features": "features_train.csv",
+    "val_features": null,
+    "test_features": null
+  },
+  "inherits_from_canonical_split": true
+}

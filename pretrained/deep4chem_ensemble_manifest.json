@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "description": "Metadata for curated Deep4Chem Chemprop checkpoint ensembles distributed outside Git.",
+  "bundles": [
+    {
+      "id": "deep4chem_abs_scaffold_full_ensemble",
+      "upstream_dataset": "deep4chem",
+      "target": "abs",
+      "target_column": "peakwavs_max",
+      "split_family": "scaffold",
+      "training_regime": "full-data",
+      "encoder_family": "chemprop_dmpnn",
+      "ensemble_size": 5,
+      "expected_local_dir": "checkpoints/abs/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11816_s42",
+      "args_json": "checkpoints/abs/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11816_s42/args.json",
+      "member_checkpoints": [
+        "checkpoints/abs/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11816_s42/fold_0/model_0/model.pt",
+        "checkpoints/abs/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11816_s42/fold_0/model_1/model.pt",
+        "checkpoints/abs/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11816_s42/fold_0/model_2/model.pt",
+        "checkpoints/abs/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11816_s42/fold_0/model_3/model.pt",
+        "checkpoints/abs/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11816_s42/fold_0/model_4/model.pt"
+      ],
+      "architecture": {
+        "chemprop_version": "1.6.1",
+        "dataset_type": "regression",
+        "hidden_size": 482,
+        "depth": 5,
+        "ffn_num_layers": 3,
+        "ffn_hidden_size": 1700,
+        "use_input_features": true,
+        "smiles_columns": [
+          "smiles"
+        ],
+        "target_columns": [
+          "peakwavs_max"
+        ]
+      },
+      "feature_compatibility": {
+        "expected_split_layout": "smiles_target_{train,val,test}.csv plus features_{train,val,test}.csv",
+        "feature_block": "256-d solvent fingerprint columns",
+        "downstream_embedding_stage": "pre_ffn"
+      },
+      "intended_downstream_use": [
+        "frozen_embedding_extraction",
+        "optional_finetuning"
+      ],
+      "distribution": {
+        "in_git": true,
+        "notes": "This curated scaffold absorption bundle is tracked directly in Git as args.json plus the 5 model.pt files."
+      },
+      "compatibility_notes": [
+        "Treat the directory path and this manifest as the ground truth for the scaffold split family.",
+        "The saved args.json records the architecture expected by dump_embeddings.py and local Chemprop finetuning commands."
+      ]
+    },
+    {
+      "id": "deep4chem_em_scaffold_full_ensemble",
+      "upstream_dataset": "deep4chem",
+      "target": "em",
+      "target_column": "empeakwavs_max",
+      "split_family": "scaffold",
+      "training_regime": "full-data",
+      "encoder_family": "chemprop_dmpnn",
+      "ensemble_size": 5,
+      "expected_local_dir": "checkpoints/em/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11502_s42",
+      "args_json": "checkpoints/em/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11502_s42/args.json",
+      "member_checkpoints": [
+        "checkpoints/em/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11502_s42/fold_0/model_0/model.pt",
+        "checkpoints/em/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11502_s42/fold_0/model_1/model.pt",
+        "checkpoints/em/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11502_s42/fold_0/model_2/model.pt",
+        "checkpoints/em/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11502_s42/fold_0/model_3/model.pt",
+        "checkpoints/em/deep4chem/scaffold/morgan_fingerprint/fromscratch_N11502_s42/fold_0/model_4/model.pt"
+      ],
+      "architecture": {
+        "chemprop_version": "1.6.1",
+        "dataset_type": "regression",
+        "hidden_size": 482,
+        "depth": 3,
+        "ffn_num_layers": 2,
+        "ffn_hidden_size": 900,
+        "use_input_features": true,
+        "smiles_columns": [
+          "smiles"
+        ],
+        "target_columns": [
+          "empeakwavs_max"
+        ]
+      },
+      "feature_compatibility": {
+        "expected_split_layout": "smiles_target_{train,val,test}.csv plus features_{train,val,test}.csv",
+        "feature_block": "256-d solvent fingerprint columns",
+        "downstream_embedding_stage": "pre_ffn"
+      },
+      "intended_downstream_use": [
+        "frozen_embedding_extraction",
+        "optional_finetuning"
+      ],
+      "distribution": {
+        "in_git": true,
+        "notes": "This curated scaffold emission bundle is tracked directly in Git as args.json plus the 5 model.pt files."
+      },
+      "compatibility_notes": [
+        "Use this bundle when reproducing the emission-side Deep4Chem encoder reuse experiments.",
+        "As above, the enclosing manifest path is more reliable than the historical split_type field in args.json."
+      ]
+    },
+    {
+      "id": "deep4chem_abs_random_full_ensemble",
+      "upstream_dataset": "deep4chem",
+      "target": "abs",
+      "target_column": "peakwavs_max",
+      "split_family": "random",
+      "training_regime": "full-data",
+      "encoder_family": "chemprop_dmpnn",
+      "ensemble_size": 5,
+      "expected_local_dir": "checkpoints/abs/deep4chem/random/morgan_fingerprint/fromscratch_N11817_s42",
+      "args_json": "checkpoints/abs/deep4chem/random/morgan_fingerprint/fromscratch_N11817_s42/args.json",
+      "member_checkpoints": [
+        "checkpoints/abs/deep4chem/random/morgan_fingerprint/fromscratch_N11817_s42/fold_0/model_0/model.pt",
+        "checkpoints/abs/deep4chem/random/morgan_fingerprint/fromscratch_N11817_s42/fold_0/model_1/model.pt",
+        "checkpoints/abs/deep4chem/random/morgan_fingerprint/fromscratch_N11817_s42/fold_0/model_2/model.pt",
+        "checkpoints/abs/deep4chem/random/morgan_fingerprint/fromscratch_N11817_s42/fold_0/model_3/model.pt",
+        "checkpoints/abs/deep4chem/random/morgan_fingerprint/fromscratch_N11817_s42/fold_0/model_4/model.pt"
+      ],
+      "architecture": {
+        "chemprop_version": "1.6.1",
+        "dataset_type": "regression",
+        "hidden_size": 482,
+        "depth": 6,
+        "ffn_num_layers": 1,
+        "ffn_hidden_size": 1100,
+        "use_input_features": true,
+        "smiles_columns": [
+          "smiles"
+        ],
+        "target_columns": [
+          "peakwavs_max"
+        ]
+      },
+      "feature_compatibility": {
+        "expected_split_layout": "smiles_target_{train,val,test}.csv plus features_{train,val,test}.csv",
+        "feature_block": "256-d solvent fingerprint columns",
+        "downstream_embedding_stage": "pre_ffn"
+      },
+      "intended_downstream_use": [
+        "frozen_embedding_extraction",
+        "optional_finetuning"
+      ],
+      "distribution": {
+        "in_git": false,
+        "notes": "This secondary bundle remains metadata-only. Use the expected local directory or pass --checkpoint-dir explicitly."
+      },
+      "compatibility_notes": [
+        "This bundle is included for completeness, but the scaffold absorption bundle is the main paper reuse path.",
+        "The saved args.json and directory layout should be read together when adapting the bundle."
+      ]
+    }
+  ]
+}

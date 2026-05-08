@@ -1,0 +1,18 @@
+{
+  "created": "2026-03-25 11:51:18",
+  "base": "data/custom/em/jeffries/splits/holdout",
+  "out": "data/custom/em/jeffries/subsets/holdout/N00038_s42",
+  "N": 38,
+  "seed": 42,
+  "alignment": "row-index",
+  "files": {
+    "train_smiles": "smiles_target_train.csv",
+    "train_manifest": "train_manifest.csv",
+    "val_smiles": "smiles_target_val.csv",
+    "test_smiles": "smiles_target_test.csv",
+    "train_features": "features_train.csv",
+    "val_features": "features_val.csv",
+    "test_features": "features_test.csv"
+  },
+  "inherits_from_canonical_split": false
+}

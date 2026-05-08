@@ -1,0 +1,29 @@
+name: uvvisml-macos
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.10
+  - pip
+  - setuptools<81
+  - numpy=1.24.4
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - rdkit
+  - pyarrow
+  - pytorch=2.4.*
+  - xgboost=2.1.4
+  - pyyaml
+  - joblib
+  - statsmodels
+  - openpyxl
+  - ipykernel
+  - pip:
+      - chemprop==1.6.1
+      - hyperopt==0.2.7
+      - optuna
+      - shap
+      - umap-learn

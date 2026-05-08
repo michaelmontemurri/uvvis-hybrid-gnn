@@ -1,0 +1,6 @@
+
+.DS_Store
+**/.DS_Store
+
+# local/internal batch jobs
+batch_jobs/hybrid_on_twostage_jeffries_experiments.sbatch

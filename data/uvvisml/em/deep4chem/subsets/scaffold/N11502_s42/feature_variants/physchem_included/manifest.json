@@ -1,0 +1,39 @@
+{
+  "source_split_dir": "data/uvvisml/em/deep4chem/subsets/scaffold/N11502_s42",
+  "output_dir": "data/uvvisml/em/deep4chem/subsets/scaffold/N11502_s42/feature_variants/physchem_included",
+  "smiles_col": "smiles",
+  "splits": [
+    {
+      "split": "train",
+      "rows": 11502,
+      "source_target_csv": "data/uvvisml/em/deep4chem/subsets/scaffold/N11502_s42/smiles_target_train.csv",
+      "source_feature_csv": "data/uvvisml/em/deep4chem/subsets/scaffold/N11502_s42/features_train.csv",
+      "output_feature_csv": "data/uvvisml/em/deep4chem/subsets/scaffold/N11502_s42/feature_variants/physchem_included/features_train.csv"
+    },
+    {
+      "split": "val",
+      "rows": 1437,
+      "source_target_csv": "data/uvvisml/em/deep4chem/subsets/scaffold/N11502_s42/smiles_target_val.csv",
+      "source_feature_csv": "data/uvvisml/em/deep4chem/subsets/scaffold/N11502_s42/features_val.csv",
+      "output_feature_csv": "data/uvvisml/em/deep4chem/subsets/scaffold/N11502_s42/feature_variants/physchem_included/features_val.csv"
+    },
+    {
+      "split": "test",
+      "rows": 1439,
+      "source_target_csv": "data/uvvisml/em/deep4chem/subsets/scaffold/N11502_s42/smiles_target_test.csv",
+      "source_feature_csv": "data/uvvisml/em/deep4chem/subsets/scaffold/N11502_s42/features_test.csv",
+      "output_feature_csv": "data/uvvisml/em/deep4chem/subsets/scaffold/N11502_s42/feature_variants/physchem_included/features_test.csv"
+    }
+  ],
+  "physchem_columns": [
+    "pc_MolWt",
+    "pc_MolLogP",
+    "pc_TPSA",
+    "pc_HBA",
+    "pc_HBD",
+    "pc_AromRings",
+    "pc_AliphRings",
+    "pc_RotBonds",
+    "pc_FractionCSP3"
+  ]
+}
